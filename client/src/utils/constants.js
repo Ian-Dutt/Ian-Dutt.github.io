@@ -16,7 +16,7 @@ setLogLevelIfDefault();
 
 export const LOG = ulog("App");
 
-export const CLIENT_TEAM_NAME = "t00 dles";
+export const CLIENT_TEAM_NAME = "Ian Dutt";
 
 export const EARTH_RADIUS_UNITS_DEFAULT = { "miles": 3959 };
 

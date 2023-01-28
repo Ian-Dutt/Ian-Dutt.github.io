@@ -56,11 +56,6 @@ class MenuButtonProps {
 function buildMenuButtons(props) {
 	return [
 		new MenuButtonProps('about-button', props.toggleAbout, <BsFillPeopleFill />, 'About'),
-		new MenuButtonProps('home-button', () => props.placeActions.append(DEFAULT_STARTING_POSITION), <FaHome />, 'Add Home'),
-		new MenuButtonProps('add-place-button', props.toggleAddPlace, <FaPlus />, 'Add Place'),
-		new MenuButtonProps('load-file-button', props.toggleLoadFile, <FaFolderOpen />, 'Load File'),
-		new MenuButtonProps('remove-all-button', props.placeActions.removeAll, <FaTrashAlt />, 'Remove All', props.disableRemoveAll),
-		new MenuButtonProps('server-settings-button', props.toggleServerSettings, <BsHddNetworkFill />, 'Server Settings'),
 	];
 }
 

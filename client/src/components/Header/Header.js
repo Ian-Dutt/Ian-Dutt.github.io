@@ -3,34 +3,17 @@ import { Container, Button } from 'reactstrap';
 import { CLIENT_TEAM_NAME } from '../../utils/constants';
 import Menu from './Menu';
 import { useToggle } from '../../hooks/useToggle';
-import AddPlace from './AddPlace';
-import LoadFile from './LoadFile'
-import ServerSettings from './ServerSettings';
 import { IoMdClose } from 'react-icons/io';
 
 export default function Header(props) {
-	const [showAddPlace, toggleAddPlace] = useToggle(false);
-	const [showServerSettings, toggleServerSettings] = useToggle(false);
-	const [showLoadFile, toggleLoadFile] = useToggle(false);
 	return (
 		<React.Fragment>
 			<HeaderContents
 				toggleAbout={props.toggleAbout}
 				showAbout={props.showAbout}
-				placeActions={props.placeActions}
-				disableRemoveAll={props.disableRemoveAll}
-				toggleAddPlace={toggleAddPlace}
-				toggleServerSettings={toggleServerSettings}
-				toggleLoadFile={toggleLoadFile}
 			/>
 			<AppModals
-				showAddPlace={showAddPlace} toggleAddPlace={toggleAddPlace}
-				showLoadFile={showLoadFile} toggleLoadFile={toggleLoadFile}
-				showServerSettings={showServerSettings} toggleServerSettings={toggleServerSettings}
-				placeActions={props.placeActions}
-				processServerConfigSuccess={props.processServerConfigSuccess}
-				serverSettings={props.serverSettings}
-				setTripName={props.setTripName}
+
 			/>
 		</React.Fragment>
 	);
@@ -66,35 +49,14 @@ function HeaderButton(props) {
 	) : (
 		<Menu
 			toggleAbout={props.toggleAbout}
-			placeActions={props.placeActions}
-			toggleAddPlace={props.toggleAddPlace}
-			toggleLoadFile={props.toggleLoadFile}
-			disableRemoveAll={props.disableRemoveAll}
-			toggleServerSettings={props.toggleServerSettings}
 		/>
 	);
 }
 
 function AppModals(props) {
 	return (
-		<>
-			<AddPlace
-				isOpen={props.showAddPlace}
-				toggleAddPlace={props.toggleAddPlace}
-				append={props.placeActions.append}
-			/>
-			<ServerSettings
-				isOpen={props.showServerSettings}
-				toggleOpen={props.toggleServerSettings}
-				processServerConfigSuccess={props.processServerConfigSuccess}
-				serverSettings={props.serverSettings}
-			/>
-			<LoadFile
-				isOpen={props.showLoadFile}
-				toggleLoadFile={props.toggleLoadFile}
-				placeActions={props.placeActions}
-				setTripName={props.setTripName}
-			/>
-		</>
+		<div>
+			Hey
+		</div>
 	);
 }

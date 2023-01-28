@@ -34,30 +34,4 @@ describe('Menu', () => {
 		user.click(aboutButton);
 		expect(menuProps.toggleAbout).toHaveBeenCalled();
 	});
-
-	test('base: Adds home location', async () => {
-		const menuToggle = screen.getByTestId('menu-toggle');
-		await waitFor(() => user.click(menuToggle));
-		const addHomeButton = screen.getByTestId('home-button');
-		user.click(addHomeButton);
-		expect(menuProps.placeActions.append).toHaveBeenCalledWith(
-			DEFAULT_STARTING_POSITION
-		);
-	});
-
-	test('base: Removes all places', async () => {
-		const menuToggle = screen.getByTestId('menu-toggle');
-		await waitFor(() => user.click(menuToggle));
-		const removeAllButton = screen.getByTestId('remove-all-button');
-		user.click(removeAllButton);
-		expect(menuProps.placeActions.removeAll).toHaveBeenCalled();
-	});
-
-	test('base: Toggles Server Settings', async () => {
-		const menuToggle = screen.getByTestId('menu-toggle');
-		await waitFor(() => user.click(menuToggle));
-		const serverSettingsButton = screen.getByTestId('server-settings-button');
-		user.click(serverSettingsButton);
-		expect(menuProps.toggleServerSettings).toHaveBeenCalled();
-	});
 });
