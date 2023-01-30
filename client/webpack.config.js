@@ -53,7 +53,7 @@ module.exports = env => {
 			new CleanWebpackPlugin(),
 			new webpack.DefinePlugin({'process.env.SERVER_PORT': SERVER_PORT}),
 			new webpack.DefinePlugin({'process.env.CLIENT_LOG_LEVEL': CLIENT_LOG_LEVEL}),
-			new HtmlWebpackPlugin({ template: 'templates/index.html', favicon: "templates/favicon.ico" }),
+			new HtmlWebpackPlugin({ template: '../index.html', favicon: "templates/favicon.ico" }),
 			new webpack.HotModuleReplacementPlugin()
 		]
 	};
