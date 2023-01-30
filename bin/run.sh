@@ -247,18 +247,8 @@ fi
 
 # install dependencies
 install_client_dependencies
-install_server_dependencies
 
 # test client
 run_client_tests
 
-if [[ "$CS314_ENV" == "dev" ]]; then
-  build_server
-  postman_tests
-  run_server_and_hotloader
-else
-  bundle_client
-  build_server
-  postman_tests
-  run_server
-fi
+run_server_and_hotloader
