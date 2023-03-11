@@ -1,0 +1,159 @@
+$dark-purple: #610474;
+$gold: #c8c372;
+$white: #ffffff;
+$green: #1e4d2b;
+
+// Secondary
+
+$black-80: #59595b;
+$aggie-orange: #d9782d;
+
+// Tertiary
+
+$alfalfa: #c9d845;
+$canyon: #cc5430;
+$dark-slate: #105456;
+$reservoir: #12a4b6;
+$sunshine: #ecc530;
+
+// Color Theme
+$primary: $dark-purple;
+$secondary: $black-80;
+$success: $dark-slate;
+$info: $reservoir;
+$warning: $sunshine;
+$danger: $canyon;
+$link: $dark-slate;
+
+// Shaping
+
+$header-height: calc(max(6vh, 50px));
+$logo-height: 28px;
+$footer-height: 25px;
+$footer-logo-height: 18px;
+$scrollbar-width: calc(100vw - 100%);
+
+.tco-text {
+  font-family: "prox-light", sans-serif;
+  font-size: $footer-logo-height;
+  color: $black-80;
+}
+
+.tco-text-upper {
+  font-family: "prox-light", sans-serif;
+  font-size: calc(min(28px, 7vw));
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+// Class Useful for Vertical Centering
+
+.vertical-center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header-logo {
+  height: $logo-height;
+  width: 58px;
+  fill: $white;
+  stroke: none;
+}
+
+.footer-logo {
+  height: $footer-logo-height;
+  width: $footer-logo-height;
+  fill: $black-80;
+  stroke: none;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #610474;
+}
+
+.full-width {
+  width: 100%;
+
+  background-color: $primary;
+  color: #ffffff;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-width-alternate {
+  width: 100%;
+
+  background-color: $white;
+  color: $black-80;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Body Styles
+
+.body {
+  padding-left: $scrollbar-width;
+  margin-bottom: $footer-height;
+  position: relative;
+  z-index: 1;
+}
+
+// Header Styles
+
+.header {
+  position: fixed;
+  padding-left: $scrollbar-width;
+  top: 0;
+  height: $header-height;
+  z-index: 2;
+}
+
+.header-title {
+  align-self: end;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+}
+
+// Bootstrap
+
+@import "~bootstrap/scss/bootstrap";
