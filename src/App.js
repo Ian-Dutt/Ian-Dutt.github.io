@@ -1,46 +1,25 @@
-import logo from "./logo.svg";
 import "./styles/App.scss";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Projects from "./components/pages/projects";
+import Navbar from "./components/nav";
+import Home from "./components/pages/home";
+import About from "./components/pages/about"
 
 function App(props) {
   return (
     <>
-      <Header />
-      <MainBody />
-      <Footer />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/about' element={<About />}/>
+        </Routes>
+      </Router>
     </>
   );
 }
 
-function MainBody() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Tis a bit empty, but dont fret. Ill finish this sometime this brek.</p>
-        <p>
-          <a
-            className="App-link"
-            href="https://github.com/ian-dutt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          {/* &bull; */}
-          {/* <a
-            className="App-link"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a> */}
-        </p>
-      </header>
-    </div>
-  );
-}
+
 
 export default App;
