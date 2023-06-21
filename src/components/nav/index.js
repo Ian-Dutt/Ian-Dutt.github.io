@@ -19,6 +19,12 @@ const Navbar = () => {
                     <NavLink to="/about">
                         About
                     </NavLink>
+                    <NavLink to="/search-visualizer">
+                        Visualizer
+                    </NavLink>
+                    <NavLink to='https://github.com/Ian-Dutt'> 
+                        GitHub
+                    </NavLink>
                 </NavMenu>
             </Nav>
         </>

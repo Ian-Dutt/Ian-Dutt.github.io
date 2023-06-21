@@ -1,0 +1,19 @@
+:root{
+    --size: repeat(10, 8px);
+}
+
+.flex-container{
+    display: grid ; 
+    grid-template-columns: var(--size);
+    gap: 25px;
+    row-gap: 2px;
+    width:50%
+}
+
+.grid-item{
+    text-align: center;
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+
+}
